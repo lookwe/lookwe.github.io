@@ -80,3 +80,9 @@ a:hover{
 .content section div p {
     font-size: 1.5rem;
 }
+
+
+section#serve div #id-h2 {
+    color: seagreen;
+    
+}

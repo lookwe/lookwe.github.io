@@ -1,7 +1,7 @@
+const h2 = document.querySelectorAll('.content section div h2');
+const length = h2.length;
 setInterval(() => {
-   let h2 = document.querySelectorAll('.content section div h2');
-   for (let i = 0; i<h2.length;i++) {
+   for (let i = 0; i<length; i++) {
      h2[i].innerHTML = new Date().toLocaleString();
    }
-   
 }, 1000);
