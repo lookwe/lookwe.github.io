@@ -1,86 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>我的博客</title>
-    <link rel="stylesheet" href="./css/index.css">
+  <meta charset="UTF-8">
+  <title>我的博客</title>
+  <link rel="stylesheet" href="./css/public/default.css">
+  <link rel="stylesheet" href="./css/public/index.css">
+  <link rel="stylesheet" href="./css/index.css">
+
+  <style>
+    .container {
+      /* Used to position the diagonal area */
+      position: relative;
+      width: 500px;
+      height: 200px;
+      margin: 0 auto;
+      line-height: 200px;
+    }
+
+    .container__diagonal {
+      /* Absolute position */
+      left: 0px;
+      position: absolute;
+      top: 0px;
+
+      /* Take full size */
+      height: 100%;
+      width: 100%;
+
+      /* Create diagonal sides */
+      transform: skewY(-5deg);
+
+      /* Background color */
+      background-color: rgba(0, 0, 0, 0.3);
+
+      /* Displayed under the main content */
+      z-index: -1;
+    }
+
+    .text-blurry {
+      text-shadow: 0 0 4px rgba(0, 173, 181, .2882),
+        0 0 4px rgba(0, 173, 181, .2882),
+        0 0 4px rgba(0, 173, 181, .2882),
+        0 0 4px rgba(0, 173, 181, .2882),
+        0 0 4px rgba(0, 173, 181, .2882),
+        0 0 4px rgba(0, 173, 181, .2882),
+        0 0 4px rgba(0, 173, 181, .2882),
+        0 0 4px rgba(0, 173, 181, .2882),
+        0 0 4px rgba(0, 173, 181, .2882);
+    }
+  </style>
 </head>
+
 <body>
-    <div id="app">
-        <div class="top">
-            <nav>
-                <ul>
-                    <li><span> <a href="#home">主页</a></span></li>
-                    <li><span> <a href="#recommend">推荐</a></span></li>
-                    <li><span> <a href="#ropular">热门</a></span></li>
-                    <li><span> <a href="#serve">服务</a></span></li>
-                </ul>
-            </nav>
-        </div>
-        
-        <div class="content">
-            <section id="home">
-                <div>
-                    <h2>2019/2/3 下午12：00</h2>
-                    <h1>追梦的少年，攀登的勇气</h1>
-                    <p>飞飞音乐听到世界 主页</p>
-                </div>
-            </section>
-
-            <section id="recommend">
-                <div>
-                    <h2>2019/2/3 下午12：00</h2>
-                    <h1>梦想其实就是身边</h1>
-                    <p>飞飞音乐听到世界 推荐</p>
-                </div>
-            </section>
-
-            <section id="ropular">
-                <div>
-                    <h2>2019/2/3 下午12：00</h2>
-                    <h1>你就是中心点</h1>
-                    <p>发现新远古大陆时代 热门</p>
-                </div>
-            </section>
-
-            <section id="serve">
-                <div>
-                    <h2>2019/2/3 下午12：00 </h2>
-                    <h1>全球最顶尖服务</h1>
-                    <p>飞飞音乐听到世界 服务</p>
-				<div class="scene">
-				  <div class="card">
-					<div class="card__face card__face--front">
-					  <img src="http://demo.htmleaf.com/1912/201912236354/img/cnKl1Ykd5rZCVwm.jpg" />
-					</div>
-					<div class="card__face card__face--back">
-					  <img src="http://demo.htmleaf.com/1912/201912236354/img/cqyJiYlRwnTeHmj.jpg" />
-					</div>
-				  </div>
-				  <div class="card">
-					<div class="card__face card__face--front">
-					  <img src="http://demo.htmleaf.com/1912/201912236354/img/FLnzi5Kq4tkRZSm.jpg" />
-					</div>
-					<div class="card__face card__face--back">
-					  <img src="http://demo.htmleaf.com/1912/201912236354/img/buDT4YS6zUMfHst.jpg" />
-					</div>
-				  </div>
-				  <div class="card">
-					<div class="card__face card__face--front">
-					  <img src="http://demo.htmleaf.com/1912/201912236354/img/uXF1Kx7lzELB6wf.jpg" />
-					</div>
-					<div class="card__face card__face--back">
-					  <img src="http://demo.htmleaf.com/1912/201912236354/img/RtVq2wxQYySDb8L.jpg" />
-					</div>
-				  </div>
-				</div>
-                </div>
-            </section>
-        </div>
-
-        <!-- <audio src="./images/mp3/英文.mp3" autoplay></audio> -->
+  <div id="app">
+    <div class="top">
+      <nav>
+        <ul>
+          <li><span> <a href="#home">主页</a></span></li>
+          <li><span> <a href="#recommend">推荐</a></span></li>
+          <li><span> <a href="#ropular">热门</a></span></li>
+          <li><span> <a href="#serve">服务</a></span></li>
+        </ul>
+      </nav>
     </div>
 
-    <script src="./js/main.js"></script>
+    <div class="content">
+      <section id="home">
+        <div>
+          <h2>2019/2/3 下午12：00</h2>
+          <h1>追梦的少年，攀登的勇气</h1>
+          <p>飞飞音乐听到世界 主页</p>
+        </div>
+        <div class="container">
+          <!-- The diagonal area -->
+          <div class="container__diagonal"></div>
+
+          <!-- Content -->
+          <h1>
+            <a class="text-blurry" href="./roll.html">点击打开新世界</a>
+          </h1>
+        </div>
+      </section>
+
+      <section id="recommend">
+        <div>
+          <h2>2019/2/3 下午12：00</h2>
+          <h1>梦想其实就是身边</h1>
+          <p>飞飞音乐听到世界 推荐</p>
+        </div>
+      </section>
+
+      <section id="ropular">
+        <div>
+          <h2>2019/2/3 下午12：00</h2>
+          <h1>你就是中心点</h1>
+          <p>发现新远古大陆时代 热门</p>
+        </div>
+      </section>
+
+      <section id="serve">
+        <div>
+          <h2>2019/2/3 下午12：00 </h2>
+          <h1>全球最顶尖服务</h1>
+          <p>飞飞音乐听到世界 服务</p>
+          <div class="scene">
+            <div class="card">
+              <div class="card__face card__face--front">
+                <img src="http://demo.htmleaf.com/1912/201912236354/img/cnKl1Ykd5rZCVwm.jpg" />
+              </div>
+              <div class="card__face card__face--back">
+                <img src="http://demo.htmleaf.com/1912/201912236354/img/cqyJiYlRwnTeHmj.jpg" />
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__face card__face--front">
+                <img src="http://demo.htmleaf.com/1912/201912236354/img/FLnzi5Kq4tkRZSm.jpg" />
+              </div>
+              <div class="card__face card__face--back">
+                <img src="http://demo.htmleaf.com/1912/201912236354/img/buDT4YS6zUMfHst.jpg" />
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__face card__face--front">
+                <img src="http://demo.htmleaf.com/1912/201912236354/img/uXF1Kx7lzELB6wf.jpg" />
+              </div>
+              <div class="card__face card__face--back">
+                <img src="http://demo.htmleaf.com/1912/201912236354/img/RtVq2wxQYySDb8L.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <audio src="./images/mp3/英文.mp3" autoplay></audio>
+  </div>
+
+  <script src="./js/main.js"></script>
 </body>
+
 </html>
