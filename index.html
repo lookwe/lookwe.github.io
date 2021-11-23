@@ -134,7 +134,12 @@
       </section>
     </div>
 
-    <audio src="./images/mp3/英文.mp3" autoplay></audio>
+    <!-- <audio src="./images/mp3/英文.mp3" autoplay></audio> -->
+
+    <audio controls muted autoplay id="my-audio">
+      <source src="./images/mp3/英文.mp3" type="audio/mp3">
+      您的浏览器不支持 audio 元素。
+    </audio>
   </div>
 
   <script src="./js/main.js"></script>
